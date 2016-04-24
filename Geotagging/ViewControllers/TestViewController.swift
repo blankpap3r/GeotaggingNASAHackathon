@@ -10,9 +10,7 @@ import UIKit
 
 class TestViewController: UIViewController {
 
-    //let url = "https://www.reddit.com/r/swift/comments/37sbyk/scrape_a_website_with_swift/"
-    
-    let url = "https://duckduckgo.com/"
+    let url = "http://www.archives.gov/research/guide-fed-records/groups/255.html"
     
     var myHTMLString: String = ""
     
@@ -23,7 +21,7 @@ class TestViewController: UIViewController {
             
             do {
                 myHTMLString = try String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding)
-                print("HTML : \(myHTMLString)")
+                //print("HTML : \(myHTMLString)")
             } catch {
                 print("Error : \(error)")
             }
@@ -35,14 +33,16 @@ class TestViewController: UIViewController {
             print(doc.title)
             
             // Search for nodes by CSS
-            for link in doc.css("a, link") {
-                print(link.text)
-                print(link["href"])
-            }
-            
+//            for link in doc.css("a, link") {
+//                print(link.text)
+//                print(link["href"])
+//            }
+            print("---------------------------------")
             // Search for nodes by XPath
-            for link in doc.xpath("//a | //link") {
-                print(link.text)
+
+            for link in doc.xpath("//p | //strong") {
+                print(link.text!)
+                print("-----")
                 print(link["href"])
             }
         }
