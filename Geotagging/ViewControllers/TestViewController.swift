@@ -14,6 +14,9 @@ class TestViewController: UIViewController {
     
     var myHTMLString: String = ""
     
+    var city: String = ""
+    var state: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,19 +34,21 @@ class TestViewController: UIViewController {
         
         if let doc = HTML(html: myHTMLString, encoding: NSUTF8StringEncoding) {
             print(doc.title)
-            
-            // Search for nodes by CSS
-//            for link in doc.css("a, link") {
-//                print(link.text)
-//                print(link["href"])
-//            }
-            print("---------------------------------")
-            // Search for nodes by XPath
 
-            for link in doc.xpath("//p | //strong") {
+            // text() is different from '.' i think because '.' means values?
+            // Go through the content of the page and find the location in every single paragraph
+            
+            city = "Cleveland"
+            state = "OH"
+            
+            // Header
+            for link in doc.xpath("//div[@id='content']//p//strong[contains(., '\(city)')]") {
                 print(link.text!)
-                print("-----")
-                print(link["href"])
+            }
+            
+            // Paragraph
+            for link in doc.xpath("//div[@id='content']//p[contains(., '\(city), \(state)')]") {
+                print(link.text!)
             }
         }
         
