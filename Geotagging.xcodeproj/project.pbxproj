@@ -13,6 +13,11 @@
 		3BAA41811CCC74550018B366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAA417F1CCC74550018B366 /* LaunchScreen.storyboard */; };
 		3BAA41891CCC7CA50018B366 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41881CCC7CA50018B366 /* TestViewController.swift */; };
 		3BAA418C1CCC7D0F0018B366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA418B1CCC7D0F0018B366 /* ViewController.swift */; };
+		3BAA41921CCC7D920018B366 /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA418E1CCC7D920018B366 /* Kanna.swift */; };
+		3BAA41931CCC7D920018B366 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA418F1CCC7D920018B366 /* libxmlHTMLDocument.swift */; };
+		3BAA41941CCC7D920018B366 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41901CCC7D920018B366 /* libxmlHTMLNode.swift */; };
+		3BAA41951CCC7D920018B366 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41911CCC7D920018B366 /* libxmlParserOption.swift */; };
+		3BAA41971CCC7E320018B366 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41961CCC7E320018B366 /* CSS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3BAA41821CCC74550018B366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BAA41881CCC7CA50018B366 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestViewController.swift; path = ViewControllers/TestViewController.swift; sourceTree = "<group>"; };
 		3BAA418B1CCC7D0F0018B366 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
+		3BAA418E1CCC7D920018B366 /* Kanna.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Kanna.swift; path = HTMLParser/Kanna.swift; sourceTree = "<group>"; };
+		3BAA418F1CCC7D920018B366 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = libxmlHTMLDocument.swift; path = HTMLParser/libxmlHTMLDocument.swift; sourceTree = "<group>"; };
+		3BAA41901CCC7D920018B366 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = HTMLParser/libxmlHTMLNode.swift; sourceTree = "<group>"; };
+		3BAA41911CCC7D920018B366 /* libxmlParserOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = HTMLParser/libxmlParserOption.swift; sourceTree = "<group>"; };
+		3BAA41961CCC7E320018B366 /* CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = HTMLParser/CSS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +66,12 @@
 		3BAA41751CCC74550018B366 /* Geotagging */ = {
 			isa = PBXGroup;
 			children = (
-				3BAA41761CCC74550018B366 /* AppDelegate.swift */,
-				3BAA417A1CCC74550018B366 /* Main.storyboard */,
-				3BAA417D1CCC74550018B366 /* Assets.xcassets */,
-				3BAA417F1CCC74550018B366 /* LaunchScreen.storyboard */,
 				3BAA41821CCC74550018B366 /* Info.plist */,
+				3BAA41761CCC74550018B366 /* AppDelegate.swift */,
+				3BAA417D1CCC74550018B366 /* Assets.xcassets */,
+				3BAA418D1CCC7D810018B366 /* HTMLParser */,
+				3BAA417F1CCC74550018B366 /* LaunchScreen.storyboard */,
+				3BAA417A1CCC74550018B366 /* Main.storyboard */,
 				3BAA418A1CCC7CD40018B366 /* View Controllers */,
 			);
 			path = Geotagging;
@@ -73,6 +84,18 @@
 				3BAA41881CCC7CA50018B366 /* TestViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3BAA418D1CCC7D810018B366 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				3BAA418E1CCC7D920018B366 /* Kanna.swift */,
+				3BAA418F1CCC7D920018B366 /* libxmlHTMLDocument.swift */,
+				3BAA41901CCC7D920018B366 /* libxmlHTMLNode.swift */,
+				3BAA41911CCC7D920018B366 /* libxmlParserOption.swift */,
+				3BAA41961CCC7E320018B366 /* CSS.swift */,
+			);
+			name = HTMLParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BAA41941CCC7D920018B366 /* libxmlHTMLNode.swift in Sources */,
 				3BAA418C1CCC7D0F0018B366 /* ViewController.swift in Sources */,
 				3BAA41891CCC7CA50018B366 /* TestViewController.swift in Sources */,
 				3BAA41771CCC74550018B366 /* AppDelegate.swift in Sources */,
+				3BAA41931CCC7D920018B366 /* libxmlHTMLDocument.swift in Sources */,
+				3BAA41971CCC7E320018B366 /* CSS.swift in Sources */,
+				3BAA41951CCC7D920018B366 /* libxmlParserOption.swift in Sources */,
+				3BAA41921CCC7D920018B366 /* Kanna.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

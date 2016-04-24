@@ -10,26 +10,42 @@ import UIKit
 
 class TestViewController: UIViewController {
 
+    //let url = "https://www.reddit.com/r/swift/comments/37sbyk/scrape_a_website_with_swift/"
+    
+    let url = "https://duckduckgo.com/"
+    
+    var myHTMLString: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let myURL = NSURL(string: url) {
+            
+            do {
+                myHTMLString = try String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding)
+                print("HTML : \(myHTMLString)")
+            } catch {
+                print("Error : \(error)")
+            }
+        } else {
+            print("Error: \(url) doesn't  URL")
+        }        
+        
+        if let doc = HTML(html: myHTMLString, encoding: NSUTF8StringEncoding) {
+            print(doc.title)
+            
+            // Search for nodes by CSS
+            for link in doc.css("a, link") {
+                print(link.text)
+                print(link["href"])
+            }
+            
+            // Search for nodes by XPath
+            for link in doc.xpath("//a | //link") {
+                print(link.text)
+                print(link["href"])
+            }
+        }
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
