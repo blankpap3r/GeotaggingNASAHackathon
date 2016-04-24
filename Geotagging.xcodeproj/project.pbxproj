@@ -18,6 +18,7 @@
 		3BAA41941CCC7D920018B366 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41901CCC7D920018B366 /* libxmlHTMLNode.swift */; };
 		3BAA41951CCC7D920018B366 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41911CCC7D920018B366 /* libxmlParserOption.swift */; };
 		3BAA41971CCC7E320018B366 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41961CCC7E320018B366 /* CSS.swift */; };
+		3BAA419A1CCCA7010018B366 /* HistoryCaller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAA41981CCCA7010018B366 /* HistoryCaller.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3BAA41901CCC7D920018B366 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = HTMLParser/libxmlHTMLNode.swift; sourceTree = "<group>"; };
 		3BAA41911CCC7D920018B366 /* libxmlParserOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = HTMLParser/libxmlParserOption.swift; sourceTree = "<group>"; };
 		3BAA41961CCC7E320018B366 /* CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = HTMLParser/CSS.swift; sourceTree = "<group>"; };
+		3BAA41991CCCA7010018B366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Geotagging/Base.lproj/HistoryCaller.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				3BAA418D1CCC7D810018B366 /* HTMLParser */,
 				3BAA417F1CCC74550018B366 /* LaunchScreen.storyboard */,
 				3BAA417A1CCC74550018B366 /* Main.storyboard */,
+				3BAA41981CCCA7010018B366 /* HistoryCaller.storyboard */,
 				3BAA418A1CCC7CD40018B366 /* View Controllers */,
 			);
 			path = Geotagging;
@@ -156,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BAA419A1CCCA7010018B366 /* HistoryCaller.storyboard in Resources */,
 				3BAA41811CCC74550018B366 /* LaunchScreen.storyboard in Resources */,
 				3BAA417E1CCC74550018B366 /* Assets.xcassets in Resources */,
 				3BAA417C1CCC74550018B366 /* Main.storyboard in Resources */,
@@ -197,6 +201,15 @@
 				3BAA41801CCC74550018B366 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BAA41981CCCA7010018B366 /* HistoryCaller.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BAA41991CCCA7010018B366 /* Base */,
+			);
+			name = HistoryCaller.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
