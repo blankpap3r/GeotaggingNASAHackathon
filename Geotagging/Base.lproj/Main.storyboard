@@ -26,15 +26,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4O-jQ-0OE">
-                                <rect key="frame" x="211" y="490" width="177" height="30"/>
-                                <state key="normal" title="I have learned something!">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="dropPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sg-46-nUA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktl-Vt-M5q">
                                 <rect key="frame" x="133" y="93" width="335" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,7 +34,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -58,13 +49,9 @@
                             <constraint firstItem="Ktl-Vt-M5q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L1v-Rh-JNs"/>
                             <constraint firstItem="PFf-aB-Yc8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R63-Yu-UtF"/>
                             <constraint firstItem="PFf-aB-Yc8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="SfM-xn-PgT"/>
-                            <constraint firstItem="a4O-jQ-0OE" firstAttribute="top" secondItem="Ktl-Vt-M5q" secondAttribute="bottom" constant="367" id="ZBA-Py-LbA"/>
                             <constraint firstItem="89K-V0-TqG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bqe-8A-QaP"/>
                             <constraint firstItem="89K-V0-TqG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fqV-ka-GgG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PFf-aB-Yc8" secondAttribute="bottom" constant="400" id="ioI-cK-r8X"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a4O-jQ-0OE" secondAttribute="bottom" constant="80" id="nPy-N1-NGY"/>
-                            <constraint firstItem="a4O-jQ-0OE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qZC-zx-vHt"/>
-                            <constraint firstItem="a4O-jQ-0OE" firstAttribute="top" secondItem="PFf-aB-Yc8" secondAttribute="bottom" constant="290" id="rIP-Hz-750"/>
                             <constraint firstItem="89K-V0-TqG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="wuH-cw-buj"/>
                         </constraints>
                     </view>
@@ -109,10 +96,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="manualUnwind" destination="owf-j5-b0A" eventType="touchUpInside" id="lOw-nD-brx"/>
+                                    <segue destination="Use-gQ-i1S" kind="unwind" unwindAction="unwind:" id="mjA-cX-OKz"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-e2-rhK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-e2-rhK">
                                 <rect key="frame" x="0.0" y="69" width="600" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -140,6 +127,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6k-qw-BqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Use-gQ-i1S" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2047" y="298"/>
         </scene>

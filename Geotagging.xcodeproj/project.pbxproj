@@ -20,6 +20,7 @@
 		3BAA41971CCC7E320018B366 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41961CCC7E320018B366 /* CSS.swift */; };
 		3BAA419A1CCCA7010018B366 /* HistoryCaller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAA41981CCCA7010018B366 /* HistoryCaller.storyboard */; };
 		3BAA419C1CCD61460018B366 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA419B1CCD61460018B366 /* HistoryViewController.swift */; };
+		3BAA419E1CCD6C530018B366 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA419D1CCD6C530018B366 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3BAA41961CCC7E320018B366 /* CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = HTMLParser/CSS.swift; sourceTree = "<group>"; };
 		3BAA41991CCCA7010018B366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Geotagging/Base.lproj/HistoryCaller.storyboard; sourceTree = "<group>"; };
 		3BAA419B1CCD61460018B366 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = ViewControllers/HistoryViewController.swift; sourceTree = "<group>"; };
+		3BAA419D1CCD6C530018B366 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				3BAA417A1CCC74550018B366 /* Main.storyboard */,
 				3BAA41981CCCA7010018B366 /* HistoryCaller.storyboard */,
 				3BAA418A1CCC7CD40018B366 /* View Controllers */,
+				3BAA419D1CCD6C530018B366 /* Utilities.swift */,
 			);
 			path = Geotagging;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				3BAA41971CCC7E320018B366 /* CSS.swift in Sources */,
 				3BAA419C1CCD61460018B366 /* HistoryViewController.swift in Sources */,
 				3BAA41951CCC7D920018B366 /* libxmlParserOption.swift in Sources */,
+				3BAA419E1CCD6C530018B366 /* Utilities.swift in Sources */,
 				3BAA41921CCC7D920018B366 /* Kanna.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

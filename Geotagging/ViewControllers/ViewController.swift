@@ -19,10 +19,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     @IBOutlet weak var Address: UILabel!
     
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        droppedPin()
+    }
+    
     @IBAction func dropPin(sender: UIButton) {
         
         // Drop Pin after clicking "I have learned something!"
 
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = center!
+        
+        annotation.title = "Pinned"
+        
+        Map.addAnnotation(annotation)
+    }
+    
+    func droppedPin() {
         let annotation = MKPointAnnotation()
         annotation.coordinate = center!
         

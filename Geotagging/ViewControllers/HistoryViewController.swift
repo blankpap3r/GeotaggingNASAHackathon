@@ -10,14 +10,9 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBAction func unwindHistory(segue: UIStoryboardSegue) {
-        
-    }
+    typealias dropPin = () -> Void
     
-    @IBAction func manualUnwind() {
-        self.dismissViewControllerAnimated(true, completion: {})
-    }
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var informationText: UITextView!
     
@@ -70,8 +65,9 @@ class HistoryViewController: UIViewController {
             // Paragraph
             for link in doc.xpath("//div[@id='content']//p[contains(., '\(city), \(state)')]") {
 //                historyArray.append(link.text!)
-                print(link.text!)
-                informationText.text = link.text!
+                let modifiedString = link.text!.replace("\n", withString: " ")
+                
+                informationText.text = modifiedString
             }
         }
         
