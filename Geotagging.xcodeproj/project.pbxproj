@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3BAA41771CCC74550018B366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41761CCC74550018B366 /* AppDelegate.swift */; };
-		3BAA41791CCC74550018B366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41781CCC74550018B366 /* ViewController.swift */; };
 		3BAA417C1CCC74550018B366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAA417A1CCC74550018B366 /* Main.storyboard */; };
 		3BAA417E1CCC74550018B366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAA417D1CCC74550018B366 /* Assets.xcassets */; };
 		3BAA41811CCC74550018B366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAA417F1CCC74550018B366 /* LaunchScreen.storyboard */; };
+		3BAA41891CCC7CA50018B366 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA41881CCC7CA50018B366 /* TestViewController.swift */; };
+		3BAA418C1CCC7D0F0018B366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA418B1CCC7D0F0018B366 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BAA41731CCC74550018B366 /* Geotagging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geotagging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAA41761CCC74550018B366 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BAA41781CCC74550018B366 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3BAA417B1CCC74550018B366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BAA417D1CCC74550018B366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BAA41801CCC74550018B366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BAA41821CCC74550018B366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BAA41881CCC7CA50018B366 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestViewController.swift; path = ViewControllers/TestViewController.swift; sourceTree = "<group>"; };
+		3BAA418B1CCC7D0F0018B366 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,22 @@
 			isa = PBXGroup;
 			children = (
 				3BAA41761CCC74550018B366 /* AppDelegate.swift */,
-				3BAA41781CCC74550018B366 /* ViewController.swift */,
 				3BAA417A1CCC74550018B366 /* Main.storyboard */,
 				3BAA417D1CCC74550018B366 /* Assets.xcassets */,
 				3BAA417F1CCC74550018B366 /* LaunchScreen.storyboard */,
 				3BAA41821CCC74550018B366 /* Info.plist */,
+				3BAA418A1CCC7CD40018B366 /* View Controllers */,
 			);
 			path = Geotagging;
+			sourceTree = "<group>";
+		};
+		3BAA418A1CCC7CD40018B366 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BAA418B1CCC7D0F0018B366 /* ViewController.swift */,
+				3BAA41881CCC7CA50018B366 /* TestViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BAA41791CCC74550018B366 /* ViewController.swift in Sources */,
+				3BAA418C1CCC7D0F0018B366 /* ViewController.swift in Sources */,
+				3BAA41891CCC7CA50018B366 /* TestViewController.swift in Sources */,
 				3BAA41771CCC74550018B366 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +215,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Geotagging/Modules\"";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -242,6 +255,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Geotagging/Modules\"";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -251,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = Geotagging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huyanh.Geotagging;
@@ -262,6 +277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = Geotagging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huyanh.Geotagging;
@@ -288,6 +304,7 @@
 				3BAA41871CCC74550018B366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
