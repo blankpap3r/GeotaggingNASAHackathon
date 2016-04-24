@@ -33,17 +33,30 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     let locationManager = CLLocationManager()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestAlwaysAuthorization()
         self.locationManager.startUpdatingLocation()
-        self.Map.showsUserLocation = true
+
     }
     
+    func regionWithGeotification() -> CLCircularRegion {
+        let region = CLCircularRegion(center: center!, radius: 1000*1000, identifier: "myRadius")
+
+        return region
+    }
+    
+    // MARK:- CLLocationManagerDelegate
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        Map.showsUserLocation = (status == .AuthorizedAlways)
+    }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -80,7 +93,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         self.locationManager.stopUpdatingLocation()
         
-        
+        //regionWithGeotification()
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
@@ -88,7 +101,5 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         print("Errors: " + error.localizedDescription)
     }
     
-
-
 }
 

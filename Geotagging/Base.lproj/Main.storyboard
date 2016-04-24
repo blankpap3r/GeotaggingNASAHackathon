@@ -35,12 +35,30 @@
                                     <action selector="dropPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sg-46-nUA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktl-Vt-M5q">
+                                <rect key="frame" x="133" y="93" width="335" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="There's something to be learned in your location!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="owf-j5-b0A" kind="presentation" id="amN-cI-nw0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ktl-Vt-M5q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="8EA-Rb-BkR"/>
                             <constraint firstAttribute="trailing" secondItem="89K-V0-TqG" secondAttribute="trailing" id="KP7-eP-UGW"/>
+                            <constraint firstItem="Ktl-Vt-M5q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L1v-Rh-JNs"/>
                             <constraint firstItem="PFf-aB-Yc8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R63-Yu-UtF"/>
                             <constraint firstItem="PFf-aB-Yc8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="SfM-xn-PgT"/>
+                            <constraint firstItem="a4O-jQ-0OE" firstAttribute="top" secondItem="Ktl-Vt-M5q" secondAttribute="bottom" constant="367" id="ZBA-Py-LbA"/>
                             <constraint firstItem="89K-V0-TqG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bqe-8A-QaP"/>
                             <constraint firstItem="89K-V0-TqG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fqV-ka-GgG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PFf-aB-Yc8" secondAttribute="bottom" constant="400" id="ioI-cK-r8X"/>
@@ -59,6 +77,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1307" y="298"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="m8f-AK-9Zs">
+            <objects>
+                <viewController id="owf-j5-b0A" customClass="HistoryViewController" customModule="Geotagging" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8bT-0L-3la"/>
+                        <viewControllerLayoutGuide type="bottom" id="FH2-pN-0vQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7lp-hZ-XIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUI-cR-2lF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="gjg-0j-Mhf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-Bb-ML2">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JrY-Pn-2lO"/>
+                                </constraints>
+                                <state key="normal" title="I have learned something!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="manualUnwind" destination="owf-j5-b0A" eventType="touchUpInside" id="lOw-nD-brx"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-e2-rhK">
+                                <rect key="frame" x="0.0" y="69" width="600" height="484"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CUI-cR-2lF" secondAttribute="trailing" id="2Fb-ev-nbd"/>
+                            <constraint firstItem="CUI-cR-2lF" firstAttribute="leading" secondItem="jhI-e2-rhK" secondAttribute="leading" id="4B3-4b-F9S"/>
+                            <constraint firstItem="jhI-e2-rhK" firstAttribute="leading" secondItem="dkg-Bb-ML2" secondAttribute="leading" id="DbH-dX-z3v"/>
+                            <constraint firstItem="jhI-e2-rhK" firstAttribute="trailing" secondItem="dkg-Bb-ML2" secondAttribute="trailing" id="Jl8-oi-1pN"/>
+                            <constraint firstItem="CUI-cR-2lF" firstAttribute="trailing" secondItem="jhI-e2-rhK" secondAttribute="trailing" id="NHM-lk-LP2"/>
+                            <constraint firstItem="jhI-e2-rhK" firstAttribute="top" secondItem="8bT-0L-3la" secondAttribute="bottom" constant="49" id="S0e-PM-7NC"/>
+                            <constraint firstItem="CUI-cR-2lF" firstAttribute="leading" secondItem="7lp-hZ-XIJ" secondAttribute="leading" id="bSj-1A-scw"/>
+                            <constraint firstItem="dkg-Bb-ML2" firstAttribute="top" secondItem="jhI-e2-rhK" secondAttribute="bottom" constant="3" id="dpe-0Z-UUk"/>
+                            <constraint firstItem="dkg-Bb-ML2" firstAttribute="bottom" secondItem="FH2-pN-0vQ" secondAttribute="top" id="n0n-Jh-vto"/>
+                            <constraint firstItem="CUI-cR-2lF" firstAttribute="top" secondItem="7lp-hZ-XIJ" secondAttribute="top" id="tv0-Cm-6iS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="informationText" destination="jhI-e2-rhK" id="Zwq-zY-Uec"/>
+                        <outlet property="titleText" destination="CUI-cR-2lF" id="X7x-Rf-9M8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6k-qw-BqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="298"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ilv-2T-Fw2">
